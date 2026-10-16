@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe8f0">
+<title>Anju's Little Love Story 💗</title>
+<style>
+:root{--pink:#ff6f9f;--deep:#b52e68;--cream:#fff9fb;--ink:#59384a;--lav:#f0e7ff}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 5%,#fff 0 7%,transparent 30%),linear-gradient(145deg,#ffe6ef,#f7eaff 55%,#fff3e9);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#f18db2 1px,transparent 1px);background-size:22px 22px}
+.wrap{width:min(680px,100%);padding:20px 15px 42px;margin:auto;position:relative}
+.top{display:flex;justify-content:space-between;align-items:center;margin:3px 3px 15px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a45b7a;font-weight:800}
+.pill{background:#ffffffb8;border:1px solid #fff;padding:8px 12px;border-radius:99px}
+.card{background:#ffffffdb;border:1px solid #fff;box-shadow:0 18px 60px #b95c8220;border-radius:28px;padding:clamp(22px,5vw,38px);text-align:center;backdrop-filter:blur(8px);position:relative;overflow:hidden}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#c05b83;font-weight:900;margin-bottom:10px}
+h1{font-size:clamp(32px,8vw,53px);line-height:1.04;margin:8px 0 15px;color:#a72d63;letter-spacing:-.04em}
+h2{font-size:clamp(24px,6vw,34px);line-height:1.13;margin:8px 0 15px;color:#a72d63;letter-spacing:-.03em}
+p{font-size:16px;line-height:1.65;margin:10px auto;max-width:490px}
+.small{font-size:13px;color:#966a7f}
+.hero-art{font-size:80px;line-height:1.25;filter:drop-shadow(0 9px 5px #e69bb044);animation:bob 2.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}
+.btn{border:0;cursor:pointer;display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:14px 20px;min-height:50px;border-radius:16px;background:linear-gradient(135deg,#ff7aa8,#e64f89);color:white;font-size:15px;font-weight:850;box-shadow:0 8px 20px #e85b8c36;transition:transform .18s,filter .18s;width:100%;margin-top:9px}
+.btn:hover{transform:translateY(-2px);filter:saturate(1.08)}.btn:active{transform:scale(.98)}
+.btn.secondary{background:#fff0f6;color:#a72d63;box-shadow:none;border:1px solid #ffd1e1}
+.options{display:grid;gap:10px;margin:23px 0 12px}
+.option{border:1.5px solid #f4ccdc;background:#fffafd;border-radius:16px;padding:14px 15px;text-align:left;font:inherit;font-size:15px;line-height:1.4;color:var(--ink);cursor:pointer;transition:.18s}
+.option:hover{border-color:#f47da7;transform:translateY(-1px);background:#fff2f7}
+.option.chosen{border-color:#e34f89;background:#ffe5ef;box-shadow:0 0 0 3px #f9bdd333}
+.progress{height:7px;background:#f6d9e5;border-radius:99px;overflow:hidden;margin:18px 0 22px}
+.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff8fb5,#c65de5);transition:width .35s}
+.feedback{min-height:26px;color:#b23b70;font-weight:800;font-size:14px}
+.hidden{display:none!important}
+.heart{position:fixed;z-index:5;pointer-events:none;animation:floatUp 1.8s ease-out forwards;font-size:24px}
+@keyframes floatUp{0%{opacity:0;transform:translateY(0) scale(.5) rotate(0)}15%{opacity:1}100%{opacity:0;transform:translateY(-220px) scale(1.5) rotate(25deg)}}
+.final-note{background:linear-gradient(145deg,#fff3f8,#fff);border:1px dashed #ef9abb;border-radius:20px;padding:20px;margin:20px 0;text-align:left;line-height:1.8}
+.proposal{font-size:clamp(29px,7vw,43px);line-height:1.12;color:#a72d63;font-weight:950;letter-spacing:-.04em;margin:18px 0}
+.yes-btn{background:linear-gradient(135deg,#ff6297,#bf3a7c)}
+footer{text-align:center;font-size:12px;color:#a9758d;margin-top:16px}
+input{font:inherit;border:1px solid #f1c4d6;border-radius:13px;padding:13px;width:100%;background:#fffafd;color:var(--ink);margin:6px 0 10px}
+@media(min-width:560px){.btn{width:auto;min-width:220px}.options{grid-template-columns:1fr 1fr}.options .option{min-height:90px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span>♡ made with extra pyaar</span><span class="pill">For Anju 🐼</span></div>
+  <main class="card" id="app">
+    <div class="hero-art">🐼💗</div>
+    <div class="eyebrow">A tiny universe, just for you</div>
+    <h1>Oyeee, meri Panda!</h1>
+    <p>Breaking news, Anju ji: one pagal sa ladka has made a whole little game just to steal one smile from you. 🥹</p>
+    <p>Ready for a mini love quiz, some bakwaas answers, and a filmy surprise at the end?</p>
+    <button class="btn" onclick="startGame()">Chalo, meri jaan ✨</button>
+    <p class="small">P.S. Correct answers are cute. Wrong answers are also cute. You literally cannot lose. 😌</p>
+  </main>
+  <footer>Designed with all the love in Nitish's dil 💌</footer>
+</div>
+<script>
+const questions=[
+ {emoji:"🎬",tag:"Round 1 · Important research",q:"Who is the main character in Nitish's life story?",opts:["Shah Rukh Khan, obviously 😎","Anju aka Panda, meri jaan 🐼","His bike… maybe N160 🏍️","Maggi at 2 AM 🍜"],correct:1,reply:"Correct answer, madam! Main character tum ho. Baaki sab supporting cast. 💗"},
+ {emoji:"🥹",tag:"Round 2 · Scientific truth",q:"When my Panda says “I'm fine”… what should her boy do?",opts:["Say “okay” and disappear 💀","Offer hugs, pyaar & listen properly 🫂","Send a 47-slide presentation","Ask Google for relationship updates"],correct:1,reply:"Hug department activated. Your feelings deserve time, softness, and listening. 🫶"},
+ {emoji:"😂",tag:"Round 3 · Very serious",q:"Who is the bigger baccha in this relationship?",opts:["Anju, certified cutie 🐼","Nitish, full-time nautanki 🤡","Both. Double trouble.","The person who stole the blanket"],correct:2,reply:"Both! Two bacche, one love story, zero chance of a boring day. 😂💕"},
+ {emoji:"💌",tag:"Round 4 · Filmy test",q:"If our love story were a Bollywood movie, what would the ending be?",opts:["Picture abhi baaki hai, but together ❤️","Sad ending with rain and violins","Hero forgets the heroine's name (arrest him)","Credits roll after one samosa"],correct:0,reply:"Happily together, with a little drama, lots of laughter, and unlimited pyaar. 🎬❤️"},
+ {emoji:"🌙",tag:"Round 5 · Dil se",q:"What does your boy want you to remember on a difficult day?",opts:["You have to be strong every second","You can tell me anything; you don't have to be okay all the time","I'll fix every problem instantly","Please submit a support ticket"],correct:1,reply:"Exactly, baccha. You don't have to be perfect or pretend to be okay with me. I'm here to listen and stand beside you. 🫂"}
+];
+let current=0,selected=null,score=0;
+const app=document.getElementById('app');
+function startGame(){current=0;score=0;renderQuestion();sprinkle(10)}
+function renderQuestion(){
+ selected=null;const q=questions[current];
+ app.innerHTML=`<div class="eyebrow">${q.tag}</div><div style="font-size:48px">${q.emoji}</div><div class="progress"><span style="width:${current/questions.length*100}%"></span></div><p class="small">Question ${current+1} of ${questions.length}</p><h2>${q.q}</h2><div class="options">${q.opts.map((o,i)=>`<button class="option" onclick="choose(${i})">${o}</button>`).join('')}</div><div class="feedback" id="feedback">Choose with your dil, Panda 💗</div><button class="btn" id="next" disabled style="opacity:.5" onclick="nextQuestion()">Lock it in 💞</button>`;
+}
+function choose(i){
+ selected=i;document.querySelectorAll('.option').forEach((b,n)=>b.classList.toggle('chosen',n===i));
+ const q=questions[current];const fb=document.getElementById('feedback');
+ fb.textContent=i===q.correct?q.reply:["Hehe, cute guess! But your boy's dil says something else. 😚","Plot twist! Try again, Panda. 💗","Arre meri jaan, even the wrong answer gets a hug. 😂"][Math.floor(Math.random()*3)];
+ const next=document.getElementById('next');next.disabled=false;next.style.opacity=1;
+}
+function nextQuestion(){if(selected===null)return;if(selected===questions[current].correct)score++;current++;if(current<questions.length)renderQuestion();else showReveal();sprinkle(7)}
+function showReveal(){
+ app.innerHTML=`<div class="hero-art">💌🐼💌</div><div class="eyebrow">Quiz complete · Dil unlocked</div><h2>One last thing, meri Anju…</h2><p>You scored ${score}/${questions.length} — but honestly, you already had my heart. No quiz needed. 🥹❤️</p><p>There is a little message hidden behind this button. Open it, baccha.</p><button class="btn" onclick="revealLetter()">Open your surprise 🎁</button><div id="letter" class="hidden"></div>`;
+}
+function revealLetter(){
+ const el=document.getElementById('letter');el.classList.remove('hidden');
+ el.innerHTML=`<div class="final-note">Meri Panda, meri baccha, meri beta… 🐼💗<br><br>I know this is just a tiny game, but I hope it reminds you that somewhere in this busy duniya, there's a boy who feels lucky to have you in his life.<br><br>I want to be there for your silly stories, your bad days, your happy dances, your random “sunoo na” moments, and all the little things that make you <b>you</b>.<br><br>I can't promise every day will be a movie, but I want us to keep choosing each other—with honesty, patience, laughter, and lots of hugs. Tum meri favourite notification ho. ❤️</div><div class="proposal">Anju, will you keep being my Panda… and let me keep loving you, pampering you, and annoying you for a very, very long time? 🥹💍</div><p>So, madam ji… what does your dil say?</p><button class="btn yes-btn" onclick="sayYes()">YES, mere pagal ❤️</button><button class="btn secondary" onclick="sayYes()">Obviously yes, nautanki 😂</button><div id="answer" class="hidden"></div>`;
+ sprinkle(24);
+}
+function sayYes(){
+ const a=document.getElementById('answer');a.classList.remove('hidden');
+ a.innerHTML=`<h2 style="margin-top:24px">YAYYYYY! 🥹💗</h2><p>Virtual hug delivered. Real wala hug is pending with interest, Panda. 🫂</p><p><b>I love you, Anju.</b><br>— Tumhara Nitish ❤️</p><button class="btn secondary" onclick="shareGame()">Send this little love story 💌</button>`;
+ sprinkle(45);
+}
+function sprinkle(n){const symbols=["💗","💕","💖","✨","🐼","❤️"];for(let i=0;i<n;i++){const e=document.createElement('span');e.className='heart';e.textContent=symbols[Math.floor(Math.random()*symbols.length)];e.style.left=Math.random()*95+'vw';e.style.top=(55+Math.random()*40)+'vh';e.style.animationDelay=Math.random()*.55+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),2400)}}
+function shareGame(){if(navigator.share){navigator.share({title:"A tiny love story for Anju 💗",text:"I made a tiny love game for you, Panda 🐼💗"}).catch(()=>{})}else{alert("Take a screenshot of your surprise and send it to your Panda 💗")}}
+</script>
+</body>
+</html>
